@@ -1,6 +1,7 @@
 package com.cfs.BMS.config;
 
 import com.cfs.BMS.security.JwtAuthenticationFilter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -37,7 +38,7 @@ public class SecurityConfig {
             .csrf(AbstractHttpConfigurer::disable)
             .authorizeHttpRequests(auth -> auth
                 // Public auth endpoints
-                .requestMatchers("/api/users/login", "/api/users/register", "/api/users/logout", "/api/users/send-otp").permitAll()
+                .requestMatchers("/api/users/login", "/api`/users/register", "/api/users/logout", "/api/users/send-otp").permitAll()
                 // Swagger Documentation endpoints
                 .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
                 // Permit all read-only GET endpoints for guests
