@@ -38,7 +38,7 @@ public class SecurityConfig {
             .csrf(AbstractHttpConfigurer::disable)
             .authorizeHttpRequests(auth -> auth
                 // Public auth endpoints
-                .requestMatchers("/api/users/login", "/api`/users/register", "/api/users/logout", "/api/users/send-otp").permitAll()
+                .requestMatchers("/api/users/login", "/api/users/register", "/api/users/logout", "/api/users/send-otp").permitAll()
                 // Swagger Documentation endpoints
                 .requestMatchers("/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
                 // Permit all read-only GET endpoints for guests
